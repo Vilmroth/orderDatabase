@@ -45,3 +45,8 @@ CREATE TABLE CUSTOMER (
 -- SELECT * FROM CUSTOMER;
 -- poistetaan customer taulu
 -- DROP TABLE CUSTOMER;
+--1. Create tables that doesnt have foreign keys(viiteavaimia muihin tauluihin)
+-- assosiatiivinen taulu(2 viiteavainta, täyty luoda taulut, joista viiteavaimet)
+-- mitä jos kaikissa tauluissa viiteavaimia?
+-- AUTO_INCREMENT -> kasvava numerosarja
+-- yhdistetty viiteavain primary key (muuttuja1, muuttuja2)
