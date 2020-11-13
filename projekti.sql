@@ -69,8 +69,6 @@ CREATE TABLE ORDERPRODUCT(
 -- The first way specifies both the column names and the values to be inserted:
 
 
-
-
 -- If you are adding values for all the columns of 
 -- the table, you do not need to specify the column 
 -- names in the SQL query. However, make sure the 
