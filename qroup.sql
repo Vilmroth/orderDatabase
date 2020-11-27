@@ -1,8 +1,8 @@
 -- Korkein ja pienin hinta, hintojen varianssi
 select max(price) as suurin, min(price) as pienin, variance(price) as varianssi from PRODUCT;
-
+--Antaa kaikkien tuotteiden kokonaishinnan ja keskihinnan kaikista tuotteista
 SELECT SUM(PRICE) AS TOTAL, AVG(PRICE) AS AVERAGE FROM PRODUCT;
-
+-- kertoo storagen kokonaiscapacityn
 SELECT Sum(capacity) FROM STORAGES;
 
 
