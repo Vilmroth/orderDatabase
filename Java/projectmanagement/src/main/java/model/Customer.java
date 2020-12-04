@@ -10,7 +10,6 @@ import javax.persistence.Id;
 @Entity
 public class Customer extends Model {
 
-    
     @Id
     private Integer customerid;
     @NotNull
