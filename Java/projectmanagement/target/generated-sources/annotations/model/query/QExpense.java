@@ -10,6 +10,7 @@ import io.ebean.typequery.PString;
 import io.ebean.typequery.PUtilDate;
 import io.ebean.typequery.TQRootBean;
 import io.ebean.typequery.TypeQueryBean;
+import javax.annotation.Generated;
 import model.Expense;
 import model.query.assoc.QAssocWork;
 
@@ -18,6 +19,7 @@ import model.query.assoc.QAssocWork;
  * 
  * THIS IS A GENERATED OBJECT, DO NOT MODIFY THIS CLASS.
  */
+@Generated("io.ebean.querybean.generator")
 @TypeQueryBean("v1")
 public class QExpense extends TQRootBean<Expense,QExpense> {
 

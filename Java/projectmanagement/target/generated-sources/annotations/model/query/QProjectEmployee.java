@@ -9,6 +9,7 @@ import io.ebean.typequery.PLong;
 import io.ebean.typequery.PUtilDate;
 import io.ebean.typequery.TQRootBean;
 import io.ebean.typequery.TypeQueryBean;
+import javax.annotation.Generated;
 import model.ProjectEmployee;
 import model.query.assoc.QAssocEmployee;
 import model.query.assoc.QAssocProject;
@@ -18,6 +19,7 @@ import model.query.assoc.QAssocProject;
  * 
  * THIS IS A GENERATED OBJECT, DO NOT MODIFY THIS CLASS.
  */
+@Generated("io.ebean.querybean.generator")
 @TypeQueryBean("v1")
 public class QProjectEmployee extends TQRootBean<ProjectEmployee,QProjectEmployee> {
 

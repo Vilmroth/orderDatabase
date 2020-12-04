@@ -3,10 +3,12 @@ package model;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import javax.annotation.Generated;
 
 import io.ebean.config.ModuleInfo;
 import io.ebean.config.ModuleInfoLoader;
 
+@Generated("io.ebean.querybean.generator")
 @ModuleInfo(entities={"model.Employee","model.Expense","model.Project","model.ProjectEmployee","model.Work"})
 public class _ebean$ModuleInfo implements ModuleInfoLoader {
 

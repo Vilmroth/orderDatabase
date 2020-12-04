@@ -8,4 +8,3 @@ unique(project_project_id, employee_person_no),
 foreign key (project_project_id) references project (project_id),
 foreign key (employee_person_no) references employee (person_no)
 )
-

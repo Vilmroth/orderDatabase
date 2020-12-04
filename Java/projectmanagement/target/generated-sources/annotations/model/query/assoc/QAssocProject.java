@@ -7,6 +7,7 @@ import io.ebean.typequery.PUtilDate;
 import io.ebean.typequery.TQAssocBean;
 import io.ebean.typequery.TQProperty;
 import io.ebean.typequery.TypeQueryBean;
+import javax.annotation.Generated;
 import model.Project;
 import model.query.QProject;
 
@@ -15,6 +16,7 @@ import model.query.QProject;
  * 
  * THIS IS A GENERATED OBJECT, DO NOT MODIFY THIS CLASS.
  */
+@Generated("io.ebean.querybean.generator")
 @TypeQueryBean("v1")
 public class QAssocProject<R> extends TQAssocBean<Project,R> {
 

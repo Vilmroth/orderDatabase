@@ -8,6 +8,7 @@ import io.ebean.typequery.PUtilDate;
 import io.ebean.typequery.TQAssocBean;
 import io.ebean.typequery.TQProperty;
 import io.ebean.typequery.TypeQueryBean;
+import javax.annotation.Generated;
 import model.Employee;
 import model.query.QEmployee;
 
@@ -16,6 +17,7 @@ import model.query.QEmployee;
  * 
  * THIS IS A GENERATED OBJECT, DO NOT MODIFY THIS CLASS.
  */
+@Generated("io.ebean.querybean.generator")
 @TypeQueryBean("v1")
 public class QAssocEmployee<R> extends TQAssocBean<Employee,R> {
 

@@ -6,6 +6,7 @@ import io.ebean.typequery.PString;
 import io.ebean.typequery.TQAssocBean;
 import io.ebean.typequery.TQProperty;
 import io.ebean.typequery.TypeQueryBean;
+import javax.annotation.Generated;
 import model.Work;
 import model.query.QWork;
 
@@ -14,6 +15,7 @@ import model.query.QWork;
  * 
  * THIS IS A GENERATED OBJECT, DO NOT MODIFY THIS CLASS.
  */
+@Generated("io.ebean.querybean.generator")
 @TypeQueryBean("v1")
 public class QAssocWork<R> extends TQAssocBean<Work,R> {
 

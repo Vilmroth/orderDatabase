@@ -8,6 +8,7 @@ import io.ebean.typequery.PUtilDate;
 import io.ebean.typequery.TQAssocBean;
 import io.ebean.typequery.TQProperty;
 import io.ebean.typequery.TypeQueryBean;
+import javax.annotation.Generated;
 import model.Expense;
 import model.query.QExpense;
 
@@ -16,6 +17,7 @@ import model.query.QExpense;
  * 
  * THIS IS A GENERATED OBJECT, DO NOT MODIFY THIS CLASS.
  */
+@Generated("io.ebean.querybean.generator")
 @TypeQueryBean("v1")
 public class QAssocExpense<R> extends TQAssocBean<Expense,R> {
 
