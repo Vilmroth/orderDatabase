@@ -6,10 +6,17 @@ import io.ebean.annotation.NotNull;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-
+/**
+ * Customer table
+ * @param int customerid
+ * @param string company
+ * @param string forename
+ * @param string surname
+ * @param string address
+ */
 @Entity
 public class Customer extends Model {
-
+    
     @Id
     private Integer customerid;
     @NotNull

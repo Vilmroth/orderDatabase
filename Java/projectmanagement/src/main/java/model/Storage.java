@@ -22,6 +22,8 @@ public class Storage extends Model {
     private Integer capacity;
     private String productname;
 
+    public Storage(){}
+
     public Storage(Integer capacity, String productname) {
         this.capacity = capacity;
         this.productname = productname;
