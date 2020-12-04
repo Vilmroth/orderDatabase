@@ -18,7 +18,7 @@ import javax.persistence.Id;
 public class Customer extends Model {
     
     @Id
-    private Integer customerid;
+    private Integer customerid; // auto increment
     @NotNull
     private String company;
     @NotNull

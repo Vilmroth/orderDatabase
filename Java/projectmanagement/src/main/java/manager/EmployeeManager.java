@@ -3,6 +3,7 @@ package manager;
 import controllers.EmployeeController;
 import model.Customer;
 import model.Employee;
+import model.Storages;
 import utils.ApplicationException;
 import utils.DatabaseMigrator;
 import utils.DateTimeUtils;
@@ -23,7 +24,15 @@ public class EmployeeManager {
 
     public static void main(String[] args) {
         initCustomer();
+        initStorages();
     }
+
+private static void initStorages(){
+    DatabaseMigrator.doMigrations();
+    Storages storage =  new Storages(25, "auto");
+    storage.save();
+}
+
 
 private static void initCustomer(){
     DatabaseMigrator.doMigrations();
