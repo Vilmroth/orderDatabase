@@ -2,6 +2,7 @@ package manager;
 
 import controllers.EmployeeController;
 import model.Customer;
+import model.Delivery;
 import model.Employee;
 import model.Storages;
 import utils.ApplicationException;
@@ -14,6 +15,7 @@ import java.util.List;
 // drop table project;
 // drop table employee;
 // drop table customer;
+// drop table delivery;
 
 
 
@@ -23,16 +25,22 @@ public class EmployeeManager {
     private static EmployeeController employeeController = new EmployeeController();
 
     public static void main(String[] args) {
-        initCustomer();
-        initStorages();
+        // initCustomer();
+        // initStorages();
+        initDelivery();
     }
+
+private static void initDelivery(){
+        DatabaseMigrator.doMigrations();
+        Delivery deliverytest = new Delivery(5, 1, "2020-05-01", "Seinajoki 5");
+        deliverytest.save();
+}
 
 private static void initStorages(){
     DatabaseMigrator.doMigrations();
     Storages storage =  new Storages(25, "auto");
     storage.save();
 }
-
 
 private static void initCustomer(){
     DatabaseMigrator.doMigrations();

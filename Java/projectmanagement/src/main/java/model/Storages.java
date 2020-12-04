@@ -8,9 +8,9 @@ import javax.persistence.Id;
 
 /**
  * Storage table
- * @param int storagelocation
- * @param string capacity
- * @param string productname
+ * @param Integer storagelocation
+ * @param String capacity
+ * @param String productname
  */
 
 @Entity

@@ -8,11 +8,11 @@ import javax.persistence.Id;
 
 /**
  * Customer table
- * @param int customerid
- * @param string company
- * @param string forename
- * @param string surname
- * @param string address
+ * @param Integer customerid -- auto increment
+ * @param String company
+ * @param String forename
+ * @param String surname
+ * @param String address
  */
 @Entity
 public class Customer extends Model {
@@ -28,7 +28,7 @@ public class Customer extends Model {
     @NotNull
     private String address;
 
-    public Customer() {}
+    public Customer() {} 
 
     public Customer(String company, String fname, String lname, String address) {
         this.company = company;
