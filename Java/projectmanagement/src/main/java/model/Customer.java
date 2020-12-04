@@ -18,7 +18,7 @@ import javax.persistence.Id;
 public class Customer extends Model {
     
     @Id
-    private Integer customerid; // auto increment
+    private Integer customerId; // auto increment
     @NotNull
     private String company;
     @NotNull
@@ -28,7 +28,7 @@ public class Customer extends Model {
     @NotNull
     private String address;
 
-    public Customer() {} 
+    public Customer() {}
 
     public Customer(String company, String fname, String lname, String address) {
         this.company = company;
@@ -68,6 +68,9 @@ public class Customer extends Model {
 
     public String getAddress(){
         return this.address;
+    }
+    public Integer getCustomerId() {
+        return this.customerId;
     }
 
 }
