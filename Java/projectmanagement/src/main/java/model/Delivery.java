@@ -7,13 +7,14 @@ import utils.DateTimeUtils;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.util.Date;
 
 /**
  * Customer table
  * @param Integer deliveryid -- auto increment
  * @param Integer maxweight
- * @param Integer customerid
+ * @param Customer customerid
  * @param Date delivery_date
  * @param String delivery_address
  */
@@ -21,22 +22,22 @@ import java.util.Date;
 public class Delivery extends Model {
     
     @Id
-    private Integer deliveryid; // auto increment
+    private Integer deliveryId; // auto increment
     @NotNull
     private Integer maxweight;
-    @NotNull
-    private Integer customerid;
+    @ManyToOne
+    private Integer customerId;
     @NotNull
     private Date deliveryDate;
     @NotNull
     private String deliveryAddress;
+
     
 
     public Delivery() {}
 
-    public Delivery(Integer maxweight, Integer customerid, String deliveryDate, String deliveryAddress) {
+    public Delivery(Integer maxweight, String deliveryDate, String deliveryAddress) {
         this.maxweight = maxweight;
-        this.customerid = customerid;
         this.deliveryAddress = deliveryAddress;
         try {
             this.deliveryDate= DateTimeUtils.formatDDMMYYDate(deliveryDate);
@@ -45,6 +46,8 @@ public class Delivery extends Model {
         }
     }
     // sets
-
+    public void setCustomerId(Customer customer){
+        this.customerId = customer.getCustomerId();
+    }
     // gets
 }
