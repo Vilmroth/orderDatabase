@@ -20,9 +20,9 @@ import model.query.QDelivery;
 @TypeQueryBean("v1")
 public class QAssocDelivery<R> extends TQAssocBean<Delivery,R> {
 
-  public PInteger<R> deliveryid;
+  public PInteger<R> deliveryId;
   public PInteger<R> maxweight;
-  public PInteger<R> customerid;
+  public PInteger<R> customerId;
   public PUtilDate<R> deliveryDate;
   public PString<R> deliveryAddress;
 

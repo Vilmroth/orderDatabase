@@ -19,7 +19,7 @@ import model.query.QCustomer;
 @TypeQueryBean("v1")
 public class QAssocCustomer<R> extends TQAssocBean<Customer,R> {
 
-  public PInteger<R> customerid;
+  public PInteger<R> customerId;
   public PString<R> company;
   public PString<R> forename;
   public PString<R> surname;

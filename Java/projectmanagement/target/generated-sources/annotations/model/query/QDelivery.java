@@ -31,9 +31,9 @@ public class QDelivery extends TQRootBean<Delivery,QDelivery> {
     return _alias;
   }
 
-  public PInteger<QDelivery> deliveryid;
+  public PInteger<QDelivery> deliveryId;
   public PInteger<QDelivery> maxweight;
-  public PInteger<QDelivery> customerid;
+  public PInteger<QDelivery> customerId;
   public PUtilDate<QDelivery> deliveryDate;
   public PString<QDelivery> deliveryAddress;
 
@@ -86,9 +86,9 @@ public class QDelivery extends TQRootBean<Delivery,QDelivery> {
    * clauses of a query. Typically referenced via static imports. 
    */
   public static class Alias {
-    public static PInteger<QDelivery> deliveryid = _alias.deliveryid;
+    public static PInteger<QDelivery> deliveryId = _alias.deliveryId;
     public static PInteger<QDelivery> maxweight = _alias.maxweight;
-    public static PInteger<QDelivery> customerid = _alias.customerid;
+    public static PInteger<QDelivery> customerId = _alias.customerId;
     public static PUtilDate<QDelivery> deliveryDate = _alias.deliveryDate;
     public static PString<QDelivery> deliveryAddress = _alias.deliveryAddress;
   }
