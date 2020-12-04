@@ -25,28 +25,25 @@ public class EmployeeManager {
     private static EmployeeController employeeController = new EmployeeController();
 
     public static void main(String[] args) {
-        // initCustomer();
-        // initStorages();
-        initDelivery();
+        DatabaseMigrator.doMigrations();
+        Customer customer1 = new Customer("Telia", "Ville", "Puska", "Seinajoki 5");
+        Customer customer2 = new Customer("Mcdonalds", "Juho", "Maki", "Vaasa 655");
+        customer1.save();
+        customer2.save();
+
+        DatabaseMigrator.doMigrations();
+        Delivery delivery1 = new Delivery(5,"2020-05-01", "Seinajoki 5");
+        Delivery delivery2 = new Delivery(255,"2021-09-08", "Laihia 12");
+        delivery1.setCustomerId(customer1);
+        delivery1.save();
+        delivery2.setCustomerId(customer2);
+        delivery2.save();
+
+        DatabaseMigrator.doMigrations();
+        Storages storage =  new Storages(25, "auto");
+        storage.save();
     }
 
-private static void initDelivery(){
-        DatabaseMigrator.doMigrations();
-        Delivery deliverytest = new Delivery(5, 1, "2020-05-01", "Seinajoki 5");
-        deliverytest.save();
-}
-
-private static void initStorages(){
-    DatabaseMigrator.doMigrations();
-    Storages storage =  new Storages(25, "auto");
-    storage.save();
-}
-
-private static void initCustomer(){
-    DatabaseMigrator.doMigrations();
-    Customer customer = new Customer("Telia", "Ville", "Puska", "Seinajoki 5");
-    customer.save();
-}
 
     private static void addEmployeeToProject(String[] args) throws ApplicationException {
         if (args.length != 4) {
