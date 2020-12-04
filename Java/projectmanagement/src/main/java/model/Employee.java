@@ -8,9 +8,6 @@ import utils.DateTimeUtils;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Transient;
-import java.math.BigDecimal;
-import java.math.MathContext;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity

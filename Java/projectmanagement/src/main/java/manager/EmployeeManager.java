@@ -1,15 +1,19 @@
 package manager;
 
 import controllers.EmployeeController;
-import io.ebean.DB;
 import model.Employee;
 import utils.ApplicationException;
 import utils.DatabaseMigrator;
 import utils.DateTimeUtils;
 
-import java.util.Date;
 import java.util.List;
-import java.util.Random;
+// drop table flyway_schema_history;
+// drop table project_employee;
+// drop table project;
+// drop table employee;
+// drop table customer;
+
+
 
 public class EmployeeManager {
 
@@ -17,27 +21,36 @@ public class EmployeeManager {
     private static EmployeeController employeeController = new EmployeeController();
 
     public static void main(String[] args) {
-        try {
-            DatabaseMigrator.doMigrations();
-            if (args.length > 0) {
-                String command = args[0];
-                if (command.equalsIgnoreCase("addemployee")) {
-                    addEmployee(args);
-                } else if (command.equalsIgnoreCase("updateemployee")) {
-                    deleteEmployee(args);
-                } else if (command.equalsIgnoreCase("deleteemployee")) {
-                    updateEmployee(args);
-                } else if (command.equalsIgnoreCase("listemployees")) {
-                    listEmployees();
-                } else if (command.equalsIgnoreCase("addemployeetoproject")) {
-                    addEmployeeToProject(args);
-                }
-            } else {
-                System.out.println("usage: java EmployeeManager addemployee | updateemployee | deleteemployee | listemployees");
-            }
-        } catch (Exception e) {
-            System.out.println("Virhe: " + e.getMessage());
-        }
+        DatabaseMigrator.doMigrations();
+        //Customer customer = new Customer("Telia", "Ville", "Puska", "Seinajoki 5");
+        //customer.save();
+
+        // DatabaseMigrator.doMigrations();
+        // Employee employee = new Employee();
+        // employee.setFirstName("Maarit");
+        // employee.setLastName("Välisuo");
+        // employee.save();
+        // try {
+        //     DatabaseMigrator.doMigrations();
+        //     if (args.length > 0) {
+        //         String command = args[0];
+        //         if (command.equalsIgnoreCase("addemployee")) {
+        //             addEmployee(args);
+        //         } else if (command.equalsIgnoreCase("updateemployee")) {
+        //             deleteEmployee(args);
+        //         } else if (command.equalsIgnoreCase("deleteemployee")) {
+        //             updateEmployee(args);
+        //         } else if (command.equalsIgnoreCase("listemployees")) {
+        //             listEmployees();
+        //         } else if (command.equalsIgnoreCase("addemployeetoproject")) {
+        //             addEmployeeToProject(args);
+        //         }
+        //     } else {
+        //         System.out.println("usage: java EmployeeManager addemployee | updateemployee | deleteemployee | listemployees");
+        //     }
+        // } catch (Exception e) {
+        //     System.out.println("Virhe: " + e.getMessage());
+        // }
     }
 
     private static void addEmployeeToProject(String[] args) throws ApplicationException {
