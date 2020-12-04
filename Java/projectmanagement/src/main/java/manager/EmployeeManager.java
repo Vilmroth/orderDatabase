@@ -1,6 +1,7 @@
 package manager;
 
 import controllers.EmployeeController;
+import model.Customer;
 import model.Employee;
 import utils.ApplicationException;
 import utils.DatabaseMigrator;
@@ -22,8 +23,8 @@ public class EmployeeManager {
 
     public static void main(String[] args) {
         DatabaseMigrator.doMigrations();
-        //Customer customer = new Customer("Telia", "Ville", "Puska", "Seinajoki 5");
-        //customer.save();
+        Customer customer = new Customer("Telia", "Ville", "Puska", "Seinajoki 5");
+        customer.save();
 
         // DatabaseMigrator.doMigrations();
         // Employee employee = new Employee();

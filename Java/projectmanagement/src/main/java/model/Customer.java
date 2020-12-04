@@ -8,7 +8,7 @@ import javax.persistence.Id;
 
 
 @Entity
-public class Asiakas extends Model {
+public class Customer extends Model {
 
     @Id
     private Integer customerid;
@@ -21,9 +21,9 @@ public class Asiakas extends Model {
     @NotNull
     private String address;
 
-    public Asiakas() {}
+    public Customer() {}
 
-    public Asiakas(String company, String fname, String lname, String address) {
+    public Customer(String company, String fname, String lname, String address) {
         this.company = company;
         this.forename = fname;
         this.surname = lname;

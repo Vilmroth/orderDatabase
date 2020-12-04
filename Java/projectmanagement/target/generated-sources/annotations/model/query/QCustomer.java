@@ -9,74 +9,74 @@ import io.ebean.typequery.PString;
 import io.ebean.typequery.TQRootBean;
 import io.ebean.typequery.TypeQueryBean;
 import javax.annotation.Generated;
-import model.Asiakas;
+import model.Customer;
 
 /**
- * Query bean for Asiakas.
+ * Query bean for Customer.
  * 
  * THIS IS A GENERATED OBJECT, DO NOT MODIFY THIS CLASS.
  */
 @Generated("io.ebean.querybean.generator")
 @TypeQueryBean("v1")
-public class QAsiakas extends TQRootBean<Asiakas,QAsiakas> {
+public class QCustomer extends TQRootBean<Customer,QCustomer> {
 
-  private static final QAsiakas _alias = new QAsiakas(true);
+  private static final QCustomer _alias = new QCustomer(true);
 
   /**
    * Return the shared 'Alias' instance used to provide properties to 
    * <code>select()</code> and <code>fetch()</code> 
    */
-  public static QAsiakas alias() {
+  public static QCustomer alias() {
     return _alias;
   }
 
-  public PInteger<QAsiakas> customerid;
-  public PString<QAsiakas> company;
-  public PString<QAsiakas> forename;
-  public PString<QAsiakas> surname;
-  public PString<QAsiakas> address;
+  public PInteger<QCustomer> customerid;
+  public PString<QCustomer> company;
+  public PString<QCustomer> forename;
+  public PString<QCustomer> surname;
+  public PString<QCustomer> address;
 
 
   /**
    * Return a query bean used to build a FetchGroup.
    */
-  public static QAsiakas forFetchGroup() {
-    return new QAsiakas(FetchGroup.queryFor(Asiakas.class));
+  public static QCustomer forFetchGroup() {
+    return new QCustomer(FetchGroup.queryFor(Customer.class));
   }
 
   /**
    * Construct using the default Database.
    */
-  public QAsiakas() {
-    super(Asiakas.class);
+  public QCustomer() {
+    super(Customer.class);
   }
 
   /**
    * Construct with a given transaction.
    */
-  public QAsiakas(Transaction transaction) {
-    super(Asiakas.class, transaction);
+  public QCustomer(Transaction transaction) {
+    super(Customer.class, transaction);
   }
 
   /**
    * Construct with a given Database.
    */
-  public QAsiakas(Database database) {
-    super(Asiakas.class, database);
+  public QCustomer(Database database) {
+    super(Customer.class, database);
   }
 
 
   /**
    * Construct for Alias.
    */
-  private QAsiakas(boolean dummy) {
+  private QCustomer(boolean dummy) {
     super(dummy);
   }
 
   /**
    * Private constructor for FetchGroup building.
    */
-  private QAsiakas(Query<Asiakas> fetchGroupQuery) {
+  private QCustomer(Query<Customer> fetchGroupQuery) {
     super(fetchGroupQuery);
   }
 
@@ -85,10 +85,10 @@ public class QAsiakas extends TQRootBean<Asiakas,QAsiakas> {
    * clauses of a query. Typically referenced via static imports. 
    */
   public static class Alias {
-    public static PInteger<QAsiakas> customerid = _alias.customerid;
-    public static PString<QAsiakas> company = _alias.company;
-    public static PString<QAsiakas> forename = _alias.forename;
-    public static PString<QAsiakas> surname = _alias.surname;
-    public static PString<QAsiakas> address = _alias.address;
+    public static PInteger<QCustomer> customerid = _alias.customerid;
+    public static PString<QCustomer> company = _alias.company;
+    public static PString<QCustomer> forename = _alias.forename;
+    public static PString<QCustomer> surname = _alias.surname;
+    public static PString<QCustomer> address = _alias.address;
   }
 }

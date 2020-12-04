@@ -7,17 +7,17 @@ import io.ebean.typequery.TQAssocBean;
 import io.ebean.typequery.TQProperty;
 import io.ebean.typequery.TypeQueryBean;
 import javax.annotation.Generated;
-import model.Asiakas;
-import model.query.QAsiakas;
+import model.Customer;
+import model.query.QCustomer;
 
 /**
- * Association query bean for AssocAsiakas.
+ * Association query bean for AssocCustomer.
  * 
  * THIS IS A GENERATED OBJECT, DO NOT MODIFY THIS CLASS.
  */
 @Generated("io.ebean.querybean.generator")
 @TypeQueryBean("v1")
-public class QAssocAsiakas<R> extends TQAssocBean<Asiakas,R> {
+public class QAssocCustomer<R> extends TQAssocBean<Customer,R> {
 
   public PInteger<R> customerid;
   public PString<R> company;
@@ -29,7 +29,7 @@ public class QAssocAsiakas<R> extends TQAssocBean<Asiakas,R> {
    * Eagerly fetch this association loading the specified properties.
    */
   @SafeVarargs @SuppressWarnings("varargs")
-  public final R fetch(TQProperty<QAsiakas>... properties) {
+  public final R fetch(TQProperty<QCustomer>... properties) {
     return fetchProperties(properties);
   }
 
@@ -37,7 +37,7 @@ public class QAssocAsiakas<R> extends TQAssocBean<Asiakas,R> {
    * Eagerly fetch this association using a 'query join' loading the specified properties.
    */
   @SafeVarargs @SuppressWarnings("varargs")
-  public final R fetchQuery(TQProperty<QAsiakas>... properties) {
+  public final R fetchQuery(TQProperty<QCustomer>... properties) {
     return fetchQueryProperties(properties);
   }
 
@@ -45,7 +45,7 @@ public class QAssocAsiakas<R> extends TQAssocBean<Asiakas,R> {
    * Eagerly fetch this association using L2 cache.
    */
   @SafeVarargs @SuppressWarnings("varargs")
-  public final R fetchCache(TQProperty<QAsiakas>... properties) {
+  public final R fetchCache(TQProperty<QCustomer>... properties) {
     return fetchCacheProperties(properties);
   }
 
@@ -53,15 +53,15 @@ public class QAssocAsiakas<R> extends TQAssocBean<Asiakas,R> {
    * Use lazy loading for this association loading the specified properties.
    */
   @SafeVarargs @SuppressWarnings("varargs")
-  public final R fetchLazy(TQProperty<QAsiakas>... properties) {
+  public final R fetchLazy(TQProperty<QCustomer>... properties) {
     return fetchLazyProperties(properties);
   }
 
-  public QAssocAsiakas(String name, R root) {
+  public QAssocCustomer(String name, R root) {
     super(name, root);
   }
 
-  public QAssocAsiakas(String name, R root, String prefix) {
+  public QAssocCustomer(String name, R root, String prefix) {
     super(name, root, prefix);
   }
 }
