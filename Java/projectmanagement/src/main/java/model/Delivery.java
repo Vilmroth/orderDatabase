@@ -25,6 +25,11 @@ public class Delivery extends Model {
     private Integer deliveryId; // auto increment
     @NotNull
     private Integer maxweight;
+    // Viiteavain project-tauluun (tietenkin sen pääavaimeen)
+    // luo tietokantaan kentän nimeltään project_project_id.
+    // Muoto perustuu
+    // nimeämiseen: <isätaulunnimi>_<isätaulunpääavaimennimi>
+    // private Project project
     @ManyToOne
     private Integer customerId;
     @NotNull
