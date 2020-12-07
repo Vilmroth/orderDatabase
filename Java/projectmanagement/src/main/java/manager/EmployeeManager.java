@@ -45,9 +45,9 @@ public class EmployeeManager {
         product1.setStorageLocation(storage);
         product1.save();
 
-        // DatabaseMigrator.doMigrations();
-        // OrderProduct orderproduct1 = new OrderProduct(5);
-        // orderproduct1.save();
+        DatabaseMigrator.doMigrations();
+        OrderProduct test = new OrderProduct();
+        test.save();
     }
 
     private static void addEmployeeToProject(String[] args) throws ApplicationException {

@@ -47,4 +47,8 @@ public class Orders extends Model {
     public void setDeliveryId(Delivery delivery) {
         this.deliveryId = delivery.getDeliveryId();
     }
+
+    public Integer getOrderId(){
+        return this.orderId;
+    }
 }

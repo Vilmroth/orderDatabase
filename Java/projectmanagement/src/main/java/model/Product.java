@@ -51,4 +51,8 @@ public class Product extends Model {
         this.storageLocation = storages.getStorageLocation();
     }
     // gets
+
+    public Integer getProductId(){
+        return this.productId;
+    }
 }
