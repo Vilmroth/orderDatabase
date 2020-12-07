@@ -36,7 +36,7 @@ public class OrderProduct extends Model {
 		this.productId = productId;
 	}
 
-	public void setOrderId(OrderProduct orderProduct){
+	public void setOrderId(Orders orders){
 		this.orderId = OrderProduct.getOrderId();
 	}
 
