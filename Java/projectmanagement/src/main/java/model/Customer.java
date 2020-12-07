@@ -6,6 +6,7 @@ import io.ebean.annotation.NotNull;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+
 /**
  * Customer table
  * @param Integer customerid -- auto increment
