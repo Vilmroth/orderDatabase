@@ -55,4 +55,7 @@ public class Delivery extends Model {
         this.customerId = customer.getCustomerId();
     }
     // gets
+    public Integer getDeliveryId(){
+        return this.deliveryId;
+    }
 }
