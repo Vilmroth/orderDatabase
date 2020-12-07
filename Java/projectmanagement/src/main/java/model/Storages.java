@@ -41,6 +41,10 @@ public class Storages extends Model {
         return this.capacity;
     }
 
+    public Integer getStorageLocation(){
+    return this.storagelocation;
+}
+
     public String getProductname(){
         return this.productname;
     }
