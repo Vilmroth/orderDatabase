@@ -2,13 +2,10 @@ package model;
 
 import io.ebean.Model;
 import io.ebean.annotation.NotNull;
-import utils.ApplicationException;
-import utils.DateTimeUtils;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Transient;
-import java.util.Date;
+import javax.persistence.ManyToOne;
 
     
     /*

@@ -18,30 +18,33 @@ import java.util.Date;
  */
 @Entity
 public class Orders extends Model {
-    
+
     @Id
-    private Integer orderId; 
+    private Integer orderId;
     @ManyToOne
     private Integer deliveryId;
     @ManyToOne
     private Integer customerId;
     @NotNull
     private Date orderDate;
-    
-    public Orders() {}
+
+    public Orders() {
+    }
 
     public Orders(String orderDate) {
         try {
-            this.orderDate= DateTimeUtils.formatDDMMYYDate(orderDate);
+            this.orderDate = DateTimeUtils.formatDDMMYYDate(orderDate);
         } catch (ApplicationException e) {
 
         }
+    }
 
-        // sets
-    public void setCustomerId(Customer customer){
+    // sets
+    public void setCustomerId(Customer customer) {
         this.customerId = customer.getCustomerId();
     }
 
-    public void setDeliveryId(Delivery delivery){
-        this.DeliveryId = delivery.getDeliveryId();
+    public void setDeliveryId(Delivery delivery) {
+        this.deliveryId = delivery.getDeliveryId();
     }
+}

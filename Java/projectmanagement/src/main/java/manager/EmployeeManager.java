@@ -5,6 +5,7 @@ import model.Customer;
 import model.Delivery;
 import model.Employee;
 import model.Storages;
+import model.Product;
 import utils.ApplicationException;
 import utils.DatabaseMigrator;
 import utils.DateTimeUtils;
