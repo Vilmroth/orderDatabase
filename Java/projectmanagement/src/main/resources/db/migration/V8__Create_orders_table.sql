@@ -5,3 +5,4 @@ create table orders (
   	customer_id int,
     foreign key (delivery_id) references delivery (delivery_id),
     foreign key (customer_id) references customer (customer_id));
+    

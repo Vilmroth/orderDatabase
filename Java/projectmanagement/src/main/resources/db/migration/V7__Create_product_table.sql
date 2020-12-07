@@ -6,3 +6,4 @@ create table product (
     weight int not null,
   	storage_location int,
     foreign key (storage_location) references storages (storage_location));
+    
