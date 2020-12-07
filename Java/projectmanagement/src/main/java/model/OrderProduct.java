@@ -1,14 +1,10 @@
 package model;
 
 import io.ebean.Model;
-import io.ebean.annotation.NotNull;
-import utils.ApplicationException;
-import utils.DateTimeUtils;
 
-import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import java.util.Date;
+import java.math.BigInteger;
 
 
 public class OrderProduct extends Model {
@@ -36,9 +32,9 @@ public class OrderProduct extends Model {
 		this.productId = productId;
 	}
 
-	public void setOrderId(Orders orders){
+	/*public void setOrderId(Orders orders){
 		this.orderId = OrderProduct.getOrderId();
-	}
+	}*/
 
 	//gets
 	public Integer getProductCount(){
@@ -49,7 +45,4 @@ public class OrderProduct extends Model {
 		return this.productId;
 	}
 
-	public Integer getOrderId(){
-		return this.orderId;
-	}
 }

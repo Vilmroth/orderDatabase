@@ -21,7 +21,7 @@ public class QAssocStorages<R> extends TQAssocBean<Storages,R> {
 
   public PInteger<R> storagelocation;
   public PInteger<R> capacity;
-  public PString<R> productname;
+  public PString<R> productName;
 
   /**
    * Eagerly fetch this association loading the specified properties.

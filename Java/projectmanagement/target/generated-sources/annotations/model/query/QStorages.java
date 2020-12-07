@@ -32,7 +32,7 @@ public class QStorages extends TQRootBean<Storages,QStorages> {
 
   public PInteger<QStorages> storagelocation;
   public PInteger<QStorages> capacity;
-  public PString<QStorages> productname;
+  public PString<QStorages> productName;
 
 
   /**
@@ -85,6 +85,6 @@ public class QStorages extends TQRootBean<Storages,QStorages> {
   public static class Alias {
     public static PInteger<QStorages> storagelocation = _alias.storagelocation;
     public static PInteger<QStorages> capacity = _alias.capacity;
-    public static PString<QStorages> productname = _alias.productname;
+    public static PString<QStorages> productName = _alias.productName;
   }
 }

@@ -19,13 +19,13 @@ public class Storages extends Model {
     private Integer storagelocation; // auto increment
     @NotNull
     private Integer capacity;
-    private String productname;
+    private String productName;
 
     public Storages(){}
 
     public Storages(Integer capacity, String productname) {
         this.capacity = capacity;
-        this.productname = productname;
+        this.productName = productname;
     }
     // sets
     public void setCapacity(Integer capacity){
@@ -33,7 +33,7 @@ public class Storages extends Model {
     }
 
     public void setProductname(String productname){
-        this.productname = productname;
+        this.productName = productname;
     }
 
    // gets
@@ -46,6 +46,6 @@ public class Storages extends Model {
 }
 
     public String getProductname(){
-        return this.productname;
+        return this.productName;
     }
 }
