@@ -10,10 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Transient;
 import java.util.Date;
 
-@Entity
-public class Employee extends Model {
     
-    /**
+    /*
  * Product table
  * @param Integer productid -- auto increment
  * @param String productname
@@ -50,6 +48,7 @@ public class Product extends Model {
         this.price = price;
         this.size = size;
         this.weight = weight;
+    }
     // sets
     public void setStorageLocation(Storages storages){
         this.storageLocation = storages.getStorageLocation();
