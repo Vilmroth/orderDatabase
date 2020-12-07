@@ -42,8 +42,12 @@ public class EmployeeManager {
         DatabaseMigrator.doMigrations();
         Storages storage =  new Storages(25, "auto");
         storage.save();
-    }
 
+        DatabaseMigrator.doMigrations();
+        Product product1 = new Product("Auto", 2500, 25, 5000);
+        product1.setStorageLocation(storage);
+        product1.save();
+    }
 
     private static void addEmployeeToProject(String[] args) throws ApplicationException {
         if (args.length != 4) {
