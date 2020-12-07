@@ -18,9 +18,8 @@ public class OrderProduct extends Model {
 
 	public OrderProduct() {}
 
-	public OrderProduct(Integer productCount, Integer productId, Integer orderId) {
+	public OrderProduct(Integer productCount) {
 		this.productCount = productCount;
-		this.productId = productId;
 	}
 
 	//sets
