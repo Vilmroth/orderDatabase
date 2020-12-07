@@ -27,13 +27,13 @@ public class OrderProduct extends Model {
 		this.productCount = productCount;
 	}
 
-	// public void setProductId(Product productId){
-	// 	this.productId = productId;
-	// }
+	public void setProductId(Product product){
+		this.productId = product.productId;
+	}
 
-	/*public void setOrderId(Orders orders){
-		this.orderId = OrderProduct.getOrderId();
-	}*/
+	public void setOrderId(Orders orders){
+		this.orderId = Orders.getOrderId();
+	}
 
 	//gets
 	public Integer getProductCount(){
