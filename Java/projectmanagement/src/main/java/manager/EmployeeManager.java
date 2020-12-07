@@ -1,11 +1,7 @@
 package manager;
 
 import controllers.EmployeeController;
-import model.Customer;
-import model.Delivery;
-import model.Employee;
-import model.Storages;
-import model.Product;
+import model.*;
 import utils.ApplicationException;
 import utils.DatabaseMigrator;
 import utils.DateTimeUtils;
@@ -48,6 +44,10 @@ public class EmployeeManager {
         Product product1 = new Product("Auto", 2500, 25, 5000);
         product1.setStorageLocation(storage);
         product1.save();
+
+        // DatabaseMigrator.doMigrations();
+        // OrderProduct orderproduct1 = new OrderProduct(5);
+        // orderproduct1.save();
     }
 
     private static void addEmployeeToProject(String[] args) throws ApplicationException {
