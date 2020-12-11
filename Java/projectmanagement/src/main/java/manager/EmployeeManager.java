@@ -1,20 +1,12 @@
 package manager;
 
 import controllers.EmployeeController;
-import model.*;
+import model.Employee;
 import utils.ApplicationException;
 import utils.DatabaseMigrator;
 import utils.DateTimeUtils;
 
 import java.util.List;
-// drop table flyway_schema_history;
-// drop table project_employee;
-// drop table project;
-// drop table employee;
-// drop table customer;
-// drop table delivery;
-
-
 
 public class EmployeeManager {
 
@@ -22,32 +14,27 @@ public class EmployeeManager {
     private static EmployeeController employeeController = new EmployeeController();
 
     public static void main(String[] args) {
-        DatabaseMigrator.doMigrations();
-        Customer customer1 = new Customer("Telia", "Ville", "Puska", "Seinajoki 5");
-        Customer customer2 = new Customer("Mcdonalds", "Juho", "Maki", "Vaasa 655");
-        customer1.save();
-        customer2.save();
-
-        DatabaseMigrator.doMigrations();
-        Delivery delivery1 = new Delivery(5,"2020-05-01", "Seinajoki 5");
-        Delivery delivery2 = new Delivery(255,"2021-09-08", "Laihia 12");
-        delivery1.setCustomerId(customer1);
-        delivery1.save();
-        delivery2.setCustomerId(customer2);
-        delivery2.save();
-
-        DatabaseMigrator.doMigrations();
-        Storages storage =  new Storages(25, "auto");
-        storage.save();
-
-        DatabaseMigrator.doMigrations();
-        Product product1 = new Product("Auto", 2500, 25, 5000);
-        product1.setStorageLocation(storage);
-        product1.save();
-
-        DatabaseMigrator.doMigrations();
-        OrderProduct test = new OrderProduct();
-        test.save();
+        try {
+            DatabaseMigrator.doMigrations();
+            if (args.length > 0) {
+                String command = args[0];
+                if (command.equalsIgnoreCase("addemployee")) {
+                    addEmployee(args);
+                } else if (command.equalsIgnoreCase("updateemployee")) {
+                    deleteEmployee(args);
+                } else if (command.equalsIgnoreCase("deleteemployee")) {
+                    updateEmployee(args);
+                } else if (command.equalsIgnoreCase("listemployees")) {
+                    listEmployees();
+                } else if (command.equalsIgnoreCase("addemployeetoproject")) {
+                    addEmployeeToProject(args);
+                }
+            } else {
+                System.out.println("usage: java EmployeeManager addemployee | updateemployee | deleteemployee | listemployees");
+            }
+        } catch (Exception e) {
+            System.out.println("Virhe: " + e.getMessage());
+        }
     }
 
     private static void addEmployeeToProject(String[] args) throws ApplicationException {
@@ -106,30 +93,3 @@ public class EmployeeManager {
 
 
 }
-
-        // DatabaseMigrator.doMigrations();
-        // Employee employee = new Employee();
-        // employee.setFirstName("Maarit");
-        // employee.setLastName("Välisuo");
-        // employee.save();
-        // try {
-        //     DatabaseMigrator.doMigrations();
-        //     if (args.length > 0) {
-        //         String command = args[0];
-        //         if (command.equalsIgnoreCase("addemployee")) {
-        //             addEmployee(args);
-        //         } else if (command.equalsIgnoreCase("updateemployee")) {
-        //             deleteEmployee(args);
-        //         } else if (command.equalsIgnoreCase("deleteemployee")) {
-        //             updateEmployee(args);
-        //         } else if (command.equalsIgnoreCase("listemployees")) {
-        //             listEmployees();
-        //         } else if (command.equalsIgnoreCase("addemployeetoproject")) {
-        //             addEmployeeToProject(args);
-        //         }
-        //     } else {
-        //         System.out.println("usage: java EmployeeManager addemployee | updateemployee | deleteemployee | listemployees");
-        //     }
-        // } catch (Exception e) {
-        //     System.out.println("Virhe: " + e.getMessage());
-        // }
