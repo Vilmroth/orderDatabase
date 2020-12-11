@@ -62,6 +62,7 @@ public class Product extends Model {
     public void setWeight(Integer weight){
         this.weight = weight;
     }
+    
     // gets
 
     public Integer getProductId(){
