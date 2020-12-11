@@ -50,6 +50,19 @@ public class Product extends Model {
     public void setStorageLocation(Storages storages){
         this.storageLocation = storages.getStorageLocation();
     }
+    public void setProductname(String productname){
+        this.productname = productname;
+    }    
+    public void setPrice(Integer price){
+        this.price = price;
+    }
+    public void setSize(Integer size){
+        this.size = size;
+    }  
+    public void setWeight(Integer weight){
+        this.weight = weight;
+    }
+    
     // gets
 
     public Integer getProductId(){
