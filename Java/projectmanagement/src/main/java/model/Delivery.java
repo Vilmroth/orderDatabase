@@ -54,8 +54,13 @@ public class Delivery extends Model {
     public void setCustomerId(Customer customer){
         this.customerId = customer.getCustomerId();
     }
+    public void setDeliveryDate(Date deliveryDate) { this.deliveryDate = deliveryDate;}
+    public void setDeliveryAddress(String deliveryAddress) { this.deliveryAddress = deliveryAddress;}
+    public void setMaxWeight(Integer maxWeight) { this.maxweight = maxweight;}
     // gets
     public Integer getDeliveryId(){
         return this.deliveryId;
     }
+
+
 }
