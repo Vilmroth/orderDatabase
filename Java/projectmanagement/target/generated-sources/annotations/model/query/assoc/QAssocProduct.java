@@ -7,27 +7,30 @@ import io.ebean.typequery.TQAssocBean;
 import io.ebean.typequery.TQProperty;
 import io.ebean.typequery.TypeQueryBean;
 import javax.annotation.Generated;
-import model.Storage;
-import model.query.QStorage;
+import model.Product;
+import model.query.QProduct;
 
 /**
- * Association query bean for AssocStorage.
+ * Association query bean for AssocProduct.
  * 
  * THIS IS A GENERATED OBJECT, DO NOT MODIFY THIS CLASS.
  */
 @Generated("io.ebean.querybean.generator")
 @TypeQueryBean("v1")
-public class QAssocStorage<R> extends TQAssocBean<Storage,R> {
+public class QAssocProduct<R> extends TQAssocBean<Product,R> {
 
-  public PInteger<R> storagelocation;
-  public PInteger<R> capacity;
-  public PString<R> productname;
+  public PInteger<R> productId;
+  public PString<R> productName;
+  public PInteger<R> price;
+  public PInteger<R> size;
+  public PInteger<R> weight;
+  public PInteger<R> storageLocation;
 
   /**
    * Eagerly fetch this association loading the specified properties.
    */
   @SafeVarargs @SuppressWarnings("varargs")
-  public final R fetch(TQProperty<QStorage>... properties) {
+  public final R fetch(TQProperty<QProduct>... properties) {
     return fetchProperties(properties);
   }
 
@@ -35,7 +38,7 @@ public class QAssocStorage<R> extends TQAssocBean<Storage,R> {
    * Eagerly fetch this association using a 'query join' loading the specified properties.
    */
   @SafeVarargs @SuppressWarnings("varargs")
-  public final R fetchQuery(TQProperty<QStorage>... properties) {
+  public final R fetchQuery(TQProperty<QProduct>... properties) {
     return fetchQueryProperties(properties);
   }
 
@@ -43,7 +46,7 @@ public class QAssocStorage<R> extends TQAssocBean<Storage,R> {
    * Eagerly fetch this association using L2 cache.
    */
   @SafeVarargs @SuppressWarnings("varargs")
-  public final R fetchCache(TQProperty<QStorage>... properties) {
+  public final R fetchCache(TQProperty<QProduct>... properties) {
     return fetchCacheProperties(properties);
   }
 
@@ -51,15 +54,15 @@ public class QAssocStorage<R> extends TQAssocBean<Storage,R> {
    * Use lazy loading for this association loading the specified properties.
    */
   @SafeVarargs @SuppressWarnings("varargs")
-  public final R fetchLazy(TQProperty<QStorage>... properties) {
+  public final R fetchLazy(TQProperty<QProduct>... properties) {
     return fetchLazyProperties(properties);
   }
 
-  public QAssocStorage(String name, R root) {
+  public QAssocProduct(String name, R root) {
     super(name, root);
   }
 
-  public QAssocStorage(String name, R root, String prefix) {
+  public QAssocProduct(String name, R root, String prefix) {
     super(name, root, prefix);
   }
 }

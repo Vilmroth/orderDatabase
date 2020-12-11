@@ -30,7 +30,7 @@ public class QCustomer extends TQRootBean<Customer,QCustomer> {
     return _alias;
   }
 
-  public PInteger<QCustomer> customerid;
+  public PInteger<QCustomer> customerId;
   public PString<QCustomer> company;
   public PString<QCustomer> forename;
   public PString<QCustomer> surname;
@@ -85,7 +85,7 @@ public class QCustomer extends TQRootBean<Customer,QCustomer> {
    * clauses of a query. Typically referenced via static imports. 
    */
   public static class Alias {
-    public static PInteger<QCustomer> customerid = _alias.customerid;
+    public static PInteger<QCustomer> customerId = _alias.customerId;
     public static PString<QCustomer> company = _alias.company;
     public static PString<QCustomer> forename = _alias.forename;
     public static PString<QCustomer> surname = _alias.surname;

@@ -9,72 +9,72 @@ import io.ebean.typequery.PString;
 import io.ebean.typequery.TQRootBean;
 import io.ebean.typequery.TypeQueryBean;
 import javax.annotation.Generated;
-import model.Storage;
+import model.Storages;
 
 /**
- * Query bean for Storage.
+ * Query bean for Storages.
  * 
  * THIS IS A GENERATED OBJECT, DO NOT MODIFY THIS CLASS.
  */
 @Generated("io.ebean.querybean.generator")
 @TypeQueryBean("v1")
-public class QStorage extends TQRootBean<Storage,QStorage> {
+public class QStorages extends TQRootBean<Storages,QStorages> {
 
-  private static final QStorage _alias = new QStorage(true);
+  private static final QStorages _alias = new QStorages(true);
 
   /**
    * Return the shared 'Alias' instance used to provide properties to 
    * <code>select()</code> and <code>fetch()</code> 
    */
-  public static QStorage alias() {
+  public static QStorages alias() {
     return _alias;
   }
 
-  public PInteger<QStorage> storagelocation;
-  public PInteger<QStorage> capacity;
-  public PString<QStorage> productname;
+  public PInteger<QStorages> storagelocation;
+  public PInteger<QStorages> capacity;
+  public PString<QStorages> productName;
 
 
   /**
    * Return a query bean used to build a FetchGroup.
    */
-  public static QStorage forFetchGroup() {
-    return new QStorage(FetchGroup.queryFor(Storage.class));
+  public static QStorages forFetchGroup() {
+    return new QStorages(FetchGroup.queryFor(Storages.class));
   }
 
   /**
    * Construct using the default Database.
    */
-  public QStorage() {
-    super(Storage.class);
+  public QStorages() {
+    super(Storages.class);
   }
 
   /**
    * Construct with a given transaction.
    */
-  public QStorage(Transaction transaction) {
-    super(Storage.class, transaction);
+  public QStorages(Transaction transaction) {
+    super(Storages.class, transaction);
   }
 
   /**
    * Construct with a given Database.
    */
-  public QStorage(Database database) {
-    super(Storage.class, database);
+  public QStorages(Database database) {
+    super(Storages.class, database);
   }
 
 
   /**
    * Construct for Alias.
    */
-  private QStorage(boolean dummy) {
+  private QStorages(boolean dummy) {
     super(dummy);
   }
 
   /**
    * Private constructor for FetchGroup building.
    */
-  private QStorage(Query<Storage> fetchGroupQuery) {
+  private QStorages(Query<Storages> fetchGroupQuery) {
     super(fetchGroupQuery);
   }
 
@@ -83,8 +83,8 @@ public class QStorage extends TQRootBean<Storage,QStorage> {
    * clauses of a query. Typically referenced via static imports. 
    */
   public static class Alias {
-    public static PInteger<QStorage> storagelocation = _alias.storagelocation;
-    public static PInteger<QStorage> capacity = _alias.capacity;
-    public static PString<QStorage> productname = _alias.productname;
+    public static PInteger<QStorages> storagelocation = _alias.storagelocation;
+    public static PInteger<QStorages> capacity = _alias.capacity;
+    public static PString<QStorages> productName = _alias.productName;
   }
 }
