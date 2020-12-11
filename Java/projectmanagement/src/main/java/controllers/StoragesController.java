@@ -17,7 +17,7 @@ public class StoragesController {
             storages.setProductname(productName);
             storagesDAO.addStorages(storages);
         } catch (Exception e){
-            System.out.println("Virhe: " + e.getMessage());
+            System.out.println("Error adding storages: " + e.getMessage());
         }
     } 
 
