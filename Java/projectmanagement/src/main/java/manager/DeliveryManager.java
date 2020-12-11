@@ -24,11 +24,11 @@ public class DeliveryManager {
     }
 
     private static void addDelivery(String[] args) throws ApplicationException {
-        if (args.length != 4) {
-            throw (new ApplicationException("parameter: <deliveryDate> <deliveryAddress> <maxWeight"));
+        if (args.length != 5) {
+            throw (new ApplicationException("parameter: <deliveryDate> <deliveryAddress> <maxWeight> <customerid>"));
         }
         else {
-            deliveryController.addDelivery(DateTimeUtils.formatDDMMYYDate(args[1]), args[2], Integer.parseInt(args[3]));
+            deliveryController.addDelivery(DateTimeUtils.formatDDMMYYDate(args[1]), args[2], Integer.parseInt(args[3]), Integer.parseInt(args[4]));
         }
     }
 }

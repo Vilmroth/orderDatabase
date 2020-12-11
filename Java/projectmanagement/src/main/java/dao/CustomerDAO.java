@@ -1,7 +1,9 @@
 package dao;
 
 import io.ebean.DB;
+import io.ebean.Expr;
 import model.Customer;
+import utils.ApplicationException;
 
 import java.util.List;
 /**
@@ -18,5 +20,13 @@ public class CustomerDAO{
 
     public List<Customer> listCustomer() {
         return DB.find(Customer.class).findList();
+    }
+
+    public Customer getCustomerId(Integer customerId) throws ApplicationException {
+        try {
+            return DB.find(Customer.class).where(Expr.eq("customer_id", customerId)).findOne();
+        } catch (Exception e) {
+            throw new ApplicationException("Error in finding the customer.");
+        }
     }
 }
