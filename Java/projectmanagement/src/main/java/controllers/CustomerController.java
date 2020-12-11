@@ -2,10 +2,12 @@ package controllers;
 
 import dao.CustomerDAO;
 import model.Customer;
+import java.util.List;
 
 
-
-
+/**
+ * Customer CustomerController
+ */
 public class CustomerController {
 
     CustomerDAO customerDAO = new CustomerDAO();
@@ -22,6 +24,10 @@ public class CustomerController {
             System.out.println("Virhe: " + e.getMessage());
         }
     } 
+
+    public List<Customer> listCustomer() {
+        return customerDAO.listCustomer();
+    }
 
 
 }
