@@ -11,11 +11,13 @@ public class ProductManager {
      private static ProductController productcontroller = new ProductController();
 
     public static void main(String[] args) {
-         System.out.println("Error: ");
          try {
              DatabaseMigrator.doMigrations();
              if (args.length > 0) {
-
+                String command = args[0];
+                if (command.equalsIgnoreCase("addproduct")) {
+                    addProduct(args);
+                }
              }
          } catch (Exception e){
              System.out.println("Error: " + e.getMessage());
@@ -24,11 +26,11 @@ public class ProductManager {
 
 
     private static void addProduct(Sting[] args) throws ApplicationException {
-        if (args.length != 6){
-            throw (new ApplicationException("parameters: <productname> <price> <size> <weight> <storagelocation>"));
+        if (args.length != 5){
+            throw (new ApplicationException("parameters: <productname> <price> <size> <weight>"));
         }
         else{
-            productcontroller.addProduct(args[1], args[2], args[3], args[4], args[5]);
+            productcontroller.addProduct(args[1], args[2], args[3], args[4]);
         }   
     }
 }
