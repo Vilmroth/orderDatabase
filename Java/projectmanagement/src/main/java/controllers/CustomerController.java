@@ -5,7 +5,9 @@ import model.Customer;
 import java.util.List;
 
 
-
+/**
+ * Customer CustomerController
+ */
 public class CustomerController {
 
     CustomerDAO customerDAO = new CustomerDAO();

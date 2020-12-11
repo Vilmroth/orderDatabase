@@ -7,7 +7,9 @@ import utils.DatabaseMigrator;
 
 import java.util.List;
 
-
+/**
+ * Customer CustomerManager
+ */
 public class CustomerManager {
 
     private static CustomerController customercontroller = new CustomerController();
