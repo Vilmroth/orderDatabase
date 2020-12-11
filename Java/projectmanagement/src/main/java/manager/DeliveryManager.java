@@ -1,16 +1,9 @@
 package manager;
 
-import controllers.EmployeeController;
-import controllers.ProjectController;
-import controllers.ProjectController;
-import model.Employee;
-import model.Project;
+import controllers.DeliveryController;
 import utils.ApplicationException;
 import utils.DatabaseMigrator;
 import utils.DateTimeUtils;
-
-import java.util.List;
-import utils.DatabaseMigrator;
 
 public class DeliveryManager {
 
@@ -35,7 +28,7 @@ public class DeliveryManager {
             throw (new ApplicationException("parameter: <deliveryDate> <deliveryAddress> <maxWeight"));
         }
         else {
-            deliveryController.addDelivery(args[1], args[2]), args[3], args[4]);
+            deliveryController.addDelivery(DateTimeUtils.formatDDMMYYDate(args[1]), args[2], Integer.parseInt(args[3]));
         }
     }
 }
