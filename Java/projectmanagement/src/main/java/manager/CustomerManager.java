@@ -2,11 +2,8 @@ package manager;
 
 
 import controllers.CustomerController;
-import controllers.EmployeeController;
-import model.*;
 import utils.ApplicationException;
 import utils.DatabaseMigrator;
-import utils.DateTimeUtils;
 
 
 public class CustomerManager {
