@@ -8,16 +8,16 @@ import model.Storages;
 
 public class StoragesController {
 
-    StoragesrDAO storagesDAO = new StoragesDAO();
+    StoragesDAO storagesDAO = new StoragesDAO();
 
-    public void addStorages(Integer capacity, String productname) {
+    public void addStorages(Integer capacity, String productName) {
         try{
             Storages storages = new Storages();
             storages.setCapacity(capacity);
-            storages.setProductname(productname);
-            storagesDAO.addCStorages(storages);
+            storages.setProductname(productName);
+            storagesDAO.addStorages(storages);
         } catch (Exception e){
-            System.out.println("Virhe: " + e.getMessage());
+            System.out.println("Error adding storages: " + e.getMessage());
         }
     } 
 

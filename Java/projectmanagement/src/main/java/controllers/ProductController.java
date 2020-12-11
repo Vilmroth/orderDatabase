@@ -2,6 +2,7 @@ package controllers;
 
 import dao.ProductDAO;
 import model.Product;
+import java.util.List;
 
 
 public class ProductController {

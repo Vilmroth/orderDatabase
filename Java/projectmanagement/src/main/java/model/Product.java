@@ -50,8 +50,8 @@ public class Product extends Model {
     public void setStorageLocation(Storages storages){
         this.storageLocation = storages.getStorageLocation();
     }
-    public void setProductname(String productname){
-        this.productname = productname;
+    public void setProductname(String productName){
+        this.productName = productName;
     }    
     public void setPrice(Integer price){
         this.price = price;

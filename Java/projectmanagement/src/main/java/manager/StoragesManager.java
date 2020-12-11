@@ -22,12 +22,12 @@ public class StoragesManager {
         }
     }
 
-    private static void addstorages(String[] args) throws ApplicationException {
+    private static void addStorages(String[] args) throws ApplicationException {
         if (args.length != 3){
             throw (new ApplicationException("parameters: <capacity> <productname>"));
         }
         else{
-            storagescontroller.addStorages(args[1], args[2]);
+            storagescontroller.addStorages(Integer.parseInt(args[1]), args[2]);
         }
     }
 }
