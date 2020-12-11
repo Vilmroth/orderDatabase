@@ -20,4 +20,8 @@ public class ProductController {
             System.out.println("Error: " + e.getMessage());
         }
     }
+
+    public List<Product> listProduct() {
+        return productDAO.listProduct();
+    }
 }

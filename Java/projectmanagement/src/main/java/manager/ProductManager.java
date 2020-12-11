@@ -30,7 +30,14 @@ public class ProductManager {
             throw (new ApplicationException("parameters: <productname> <price> <size> <weight>"));
         }
         else{
-            productcontroller.addProduct(args[1], args[2], args[3], args[4]);
+            productcontroller.addProduct(args[1], Integer.parseInt(args[2]),Integer.parseInt(args[3]),Integer.parseInt(args[4]));
         }   
+    }
+
+    private static void listProducts() {
+        List<Product> products = productcontroller.listProduct();
+        for (Product product : products) {
+            System.out.println(product);
+        }
     }
 }
