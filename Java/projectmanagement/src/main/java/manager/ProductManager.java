@@ -25,7 +25,7 @@ public class ProductManager {
     }
 
 
-    private static void addProduct(Sting[] args) throws ApplicationException {
+    private static void addProduct(String[] args) throws ApplicationException {
         if (args.length != 5){
             throw (new ApplicationException("parameters: <productname> <price> <size> <weight>"));
         }
