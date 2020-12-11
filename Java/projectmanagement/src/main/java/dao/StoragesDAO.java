@@ -1,7 +1,6 @@
 package dao;
 
 import model.Storages;
-
 public class StoragesDAO{
 
     public void addStorages(Storages storages){

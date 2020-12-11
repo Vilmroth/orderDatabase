@@ -4,7 +4,8 @@ package manager;
 import controllers.ProductController;
 import utils.ApplicationException;
 import utils.DatabaseMigrator;
-
+import model.Product;
+import java.util.List;
 
 public class ProductManager {
 
