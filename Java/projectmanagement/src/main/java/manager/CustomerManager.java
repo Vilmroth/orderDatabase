@@ -2,8 +2,11 @@ package manager;
 
 
 import controllers.CustomerController;
+import controllers.EmployeeController;
+import model.*;
 import utils.ApplicationException;
 import utils.DatabaseMigrator;
+import utils.DateTimeUtils;
 
 
 public class CustomerManager {
@@ -26,7 +29,7 @@ public class CustomerManager {
 
     private static void addCustomer(String[] args) throws ApplicationException {
         if (args.length != 5){
-            throw (new ApplicationException("parameters: <company> <forename> <surname> <address>"));
+            throw (new ApplicationException("parameters: <company> <forenamy> <surname> <address>"));
         }
         else{
             customercontroller.addCustomer(args[1], args[2], args[3], args[4]);
