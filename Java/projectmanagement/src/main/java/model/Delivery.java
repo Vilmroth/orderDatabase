@@ -24,7 +24,7 @@ public class Delivery extends Model {
     @Id
     private Integer deliveryId; // auto increment
     @NotNull
-    private Integer maxweight;
+    private Integer maxWeight;
     // Viiteavain project-tauluun (tietenkin sen pääavaimeen)
     // luo tietokantaan kentän nimeltään project_project_id.
     // Muoto perustuu
@@ -41,8 +41,8 @@ public class Delivery extends Model {
 
     public Delivery() {}
 
-    public Delivery(Integer maxweight, String deliveryDate, String deliveryAddress) {
-        this.maxweight = maxweight;
+    public Delivery(Integer maxWeight, String deliveryDate, String deliveryAddress) {
+        this.maxWeight = maxWeight;
         this.deliveryAddress = deliveryAddress;
         try {
             this.deliveryDate= DateTimeUtils.formatDDMMYYDate(deliveryDate);
@@ -56,7 +56,7 @@ public class Delivery extends Model {
     }
     public void setDeliveryDate(Date deliveryDate) { this.deliveryDate = deliveryDate;}
     public void setDeliveryAddress(String deliveryAddress) { this.deliveryAddress = deliveryAddress;}
-    public void setMaxWeight(Integer maxWeight) { this.maxweight = maxweight;}
+    public void setMaxWeight(Integer maxWeight) { this.maxWeight = maxWeight;}
     // gets
     public Integer getDeliveryId(){
         return this.deliveryId;

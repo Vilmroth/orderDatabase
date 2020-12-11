@@ -37,6 +37,17 @@ public class Customer extends Model {
         this.surname = lname;
         this.address = address;
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "customerId=" + customerId +
+                ", firstName='" + forename + '\'' +
+                ", lastName='" + surname + '\'' +
+                ", company=" + company +
+                ", title='" + address + '\'' +
+                '}';
+    }
     // sets
     public void setCompany(String company){
         this.company = company;
@@ -72,6 +83,9 @@ public class Customer extends Model {
     }
     public Integer getCustomerId() {
         return this.customerId;
+    }
+    public void print_customerid(){
+        System.out.println(this.customerId);
     }
 
 }

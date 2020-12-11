@@ -2,6 +2,8 @@ package controllers;
 
 import dao.CustomerDAO;
 import model.Customer;
+import utils.ApplicationException;
+
 import java.util.List;
 
 
@@ -27,6 +29,14 @@ public class CustomerController {
 
     public List<Customer> listCustomer() {
         return customerDAO.listCustomer();
+    }
+
+    public Customer getCustomerId(Integer customerId) throws ApplicationException {
+        try {
+            return customerDAO.getCustomerId(customerId);
+        } catch (Exception e) {
+            throw (new ApplicationException("Getting customer failed.", e));
+        }
     }
 
 
