@@ -1,6 +1,9 @@
 package dao;
 
+import io.ebean.DB;
 import model.Customer;
+
+import java.util.List;
 
 public class CustomerDAO{
     public void addCustomer(Customer customer){
@@ -9,5 +12,9 @@ public class CustomerDAO{
         } catch (Exception e) {
             System.out.println("Virhe: " + e.getMessage());
         }
+    }
+
+    public List<Customer> listCustomer() {
+        return DB.find(Customer.class).findList();
     }
 }
